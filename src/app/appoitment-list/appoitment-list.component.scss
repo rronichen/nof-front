@@ -1,0 +1,64 @@
+.container{
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    .headLine{
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 50px;
+        color: rgb(255 29 0);
+    }
+    .subHeadLine{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 50px;
+        color: rgb(34, 0, 255);
+    }
+
+    .select{
+        display: flex;
+        align-items: center;
+    }
+
+    .mat-form{
+        text-align: right;
+        margin-left: 15px;
+        width: 100px;
+    }
+    .btn{
+        height: 28px;
+        box-shadow: 0 17px 19px 0 rgb(255 29 0 / 22%);
+        border-radius: 50px;
+        border: 0;
+        cursor: pointer;
+
+    }
+    input{
+        height: 28px;
+        border-radius: 25px;
+        border: 1px solid rgb(255 29 0);
+        padding:  0 10px;
+        margin-right: 142px;
+        margin-left: 30px;
+    }
+    .list{
+        margin-top: -25px;
+    }
+    .hello{
+
+    }
+    .mat-sort-header{
+        font-size: 20px;
+    }
+}
+::ng-deep.tipClass{
+    background-color: blue;
+}

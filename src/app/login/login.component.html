@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="headLine">מספרת כלבים</div>
+    <div class="radioButtons">
+        <mat-radio-group [(ngModel)]="isLogin">
+            <mat-radio-button [value]="true">כניסה</mat-radio-button>
+            <mat-radio-button [value]="false">רישום</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="dataInput" *ngIf="!isLogin">
+        <div class="label">שם מלא</div>
+       <input matInput type="text" [(ngModel)]="user.firstName">
+    </div>
+    <div class="dataInput">
+        <div class="label">שם משתמש</div>
+       <input matInput type="text" [(ngModel)]="user.userName">
+    </div>
+    <div class="dataInput">
+        <div class="label">סיסמה</div>
+       <input matInput type="password"  [(ngModel)]="user.password">
+    </div>
+    <button (click)="continue()">המשך</button>
+</div>

@@ -1,0 +1,11 @@
+<div class="container" [class.border]="isSameUser">
+    <div class="derails">
+        שעת התור : <span class="bold">{{appointment.appointmentTime | date: 'HH:mm'}}</span> | 
+        שם הלקוח : <span class="bold">{{ appointment.user.firstName }} </span> 
+       
+    </div>
+    <div class="buttons" *ngIf="isSameUser">
+        <button (click)="delete()">מחק תור</button>
+    </div>
+   
+</div>

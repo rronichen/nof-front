@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="headLine">מספרת כלבים</div>
+    <div class="subHeadLine">רשימת תורים</div>
+    <div class="hello"> שלום: <span>{{ user.firstName }}</span></div>
+    <div class="select">     
+        <mat-form-field class="mat-form">
+            <mat-label>בחר שעה</mat-label>
+            <mat-select [(ngModel)]="chooshenHour">
+                <mat-option *ngFor="let hours of appointmentTimeOptionList" [value]="hours.hour" [disabled]="!hours.isAvailable">
+                    {{ hours.hour}}:00
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button (click)="onAdd()" class="btn">הוסף פגישה</button>
+        <input class="" type="text" [(ngModel)]="searchText" placeholder="חיפוש">
+        <table matSort (matSortChange)="sortData($event)">
+            <tr>
+                <th>    מיין לפי : </th>
+              <th mat-sort-header="name">שם</th>
+              <th mat-sort-header="date">תאריך</th>
+    
+            </tr>
+          
+          </table>
+
+    </div>
+   
+    <div class="list">
+        <app-appointment *ngFor="let appointment of sortedData | filter: searchText"
+            class="item" 
+            [appointment]="appointment"
+            (deleteAppointment)="onDeleteAppointment($event)"
+            [isSameUser]="appointment.user.id == user.id"
+            [matTooltip]="tooltipText(appointment)"
+            (click)="tooltip.toggle();"
+            [matTooltipPosition]="'left'"
+            #tooltip="matTooltip"
+            matTooltipClass="tipClass"
+            (mouseenter)="$event.stopImmediatePropagation()" 
+            (mouseleave)="$event.stopImmediatePropagation()"
+        >
+
+        </app-appointment>
+    </div>
+
+</div>

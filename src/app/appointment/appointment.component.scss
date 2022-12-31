@@ -1,0 +1,30 @@
+.container{
+    height: 50px;
+    min-width: 500px;
+    border: solid 1px #ff0000;// #ff0000;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    padding:0 15px;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+
+    &.border{
+        border: solid 2px#2200ff;
+    }
+    
+
+    .bold{
+        font-weight: bold;
+    }
+
+    button{
+        height: 28px;
+        box-shadow: 0 17px 19px 0 rgb(255 29 0 / 22%);
+        border-radius: 50px;
+        border: 0;
+        cursor: pointer;
+    }
+}
